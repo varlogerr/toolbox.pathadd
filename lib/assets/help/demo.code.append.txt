@@ -1,0 +1,5 @@
+# append directory to the PATH
+pathadd.append ./path1
+# validate the directory is added
+pathadd.ls
+tool11.sh

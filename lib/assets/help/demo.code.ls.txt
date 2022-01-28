@@ -1,0 +1,3 @@
+# list PATH directories, one directory
+# per line
+pathadd.ls

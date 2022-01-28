@@ -1,0 +1,7 @@
+├── path1
+│   ├── tool11.sh
+│   └── tool12.sh
+├── path2
+│   ├── tool21.sh
+│   └── tool22.sh
+└── pathfile.pathadd

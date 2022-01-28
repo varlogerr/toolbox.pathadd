@@ -1,0 +1,25 @@
+Append directory to PATH
+
+Usage:
+  pathadd.append [OPTIONS...] [DIRS...]
+
+Available options:
+  --force (flag)
+    Force add directories even if they already
+    present in the PATH
+  -o, --override
+    Override directories if they already exist
+    in the PATH
+  -f, --pathfiles
+    Read directories list from a file. Empty
+    lines and lines starting with '#' are
+    ignored. Non-absolute paths are resolved
+    relatively to $PWD. Paths prefixed with
+    ':' are resolved relatively to the
+    pathfile directory. Example:
+      # resolves to $PWD
+      path/to/add
+      # resolves to pathfile directory
+      :path/to/add
+  --gen-pathfile (flag)
+    Generate pathfile dummy to stdout

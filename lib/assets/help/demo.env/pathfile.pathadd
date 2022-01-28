@@ -1,0 +1,10 @@
+# # absolute paths are resolved normally
+# /path/to/add
+# # prefixed with ':' resolved to pathfile
+# # directory. The following will be resolved
+# # to $(dirname $(realpath </path/to/pathfile>)
+# :relative/path/to/add
+# # relative paths are resolved to $PWD
+# relative/path/to/add
+:path1
+:path2

@@ -1,0 +1,9 @@
+# read directories to append from a file
+pathadd.append -f ./pathfile.pathadd
+# or, if pathfile has '.pathadd' extension, it
+# can be loaded without `-f` option
+envar.source ./pathfile.pathadd
+# validate the directory is added
+pathadd.ls
+tool11.sh
+tool21.sh
