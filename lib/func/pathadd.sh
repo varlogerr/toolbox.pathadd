@@ -1,3 +1,9 @@
+##########
+# This env vars are set from main.sh
+# * __PATHADD_TOOL_ROOTDIR - envar tool root directory
+# * __PATHADD_TOOL_LIBDIR - envar lib directory
+##########
+
 pathadd.append() {
   __pathadd.opts.func_help "${FUNCNAME[0]}" "${@}" && return
 
@@ -51,9 +57,7 @@ pathadd.ls() {
 }
 
 pathadd.help() {
-  local help_dir="$(
-    dirname "$(realpath "${BASH_SOURCE[0]}")"
-  )/../assets/help"
+  local help_dir="${__PATHADD_TOOL_LIBDIR}/assets/help"
 
   declare -A OPTS=(
     [demo]=0

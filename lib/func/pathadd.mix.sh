@@ -1,9 +1,7 @@
 __pathadd.gen_pathfile() {
   [[ ${1} -ne 1 ]] && return 1
 
-  local assetsdir="$(
-    dirname "${BASH_SOURCE[0]}"
-  )/../assets"
+  local assetsdir="${__PATHADD_TOOL_LIBDIR}/assets"
 
   grep -vFx '' "${assetsdir}/pathfile.pathadd" \
   | sed 's/^/# /g'

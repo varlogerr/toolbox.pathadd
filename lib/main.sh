@@ -30,4 +30,15 @@ __iife() {
   while read -r f; do
     [[ -n "${f}" ]] && export -f "${f}"
   done <<< "${unknown_funcs}"
+
+  # export basic dirs
+  __PATHADD_TOOL_ROOTDIR="$(realpath "$(dirname "${src_file}")/..")"
+  __PATHADD_TOOL_LIBDIR="${__PATHADD_TOOL_ROOTDIR}/lib"
+  for var in \
+    __PATHADD_TOOL_ROOTDIR \
+    __PATHADD_TOOL_LIBDIR \
+  ; do
+    [[ -z "$(bash -c 'echo ${'${var}'+x}')" ]] \
+      && export "${var}"
+  done
 } && __iife

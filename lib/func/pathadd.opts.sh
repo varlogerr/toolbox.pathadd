@@ -51,9 +51,7 @@ __pathadd.opts.add() {
 
 __pathadd.opts.func_help() {
   local funcname="${1}"
-  local help_file="$(dirname "$(
-    realpath "${BASH_SOURCE[0]}"
-  )")/../assets/help/func.${funcname}.txt"
+  local help_file="${__PATHADD_TOOL_LIBDIR}/assets/help/func.${funcname}.txt"
   shift
 
   while :; do
