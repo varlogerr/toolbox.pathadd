@@ -101,6 +101,8 @@ __pathadd.opts.parse_pathfiles_to_global() {
     [[ -z "${pathfile}" ]] && continue
     [[ ! -f "${pathfile}" ]] && continue
 
+    pathfile="$(realpath "${pathfile}")"
+
     # exclude empty lines and lines
     # starting with '#'
     grep -v '^#' "${pathfile}" | grep -vFx '' \
